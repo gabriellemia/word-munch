@@ -28,5 +28,3 @@ searchBtn.addEventListener("click", async function () {
   displayMeaning.textContent = "💩 " + "Meaning: " + definition[0].meanings[0].definitions[0].definition;
   displaySynonym.textContent = "💩 " + "Synonym: " + definition[0].meanings[0].synonyms;
 });
-
-const button = addEventListener("btn");
