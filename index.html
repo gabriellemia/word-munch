@@ -1,32 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
     <script src="script.js" defer></script>
     <title>Word Munch</title>
-</head>
+    <script src="https://js.sentry-cdn.com/1049d3ef6e5160982a0ad03bc133cb53.min.js" crossorigin="anonymous"></script>
+    <script>
+      Sentry.onLoad(function () {
+        Sentry.init({
+          // Performance Monitoring
+          tracesSampleRate: 1.0, // Capture 100% of the transactions
+          // Session Replay
+          replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+          replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+        });
+      });
+    </script>
+    <script>
+      myUndefinedFunction();
+    </script>
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <h1>Word Munch</h1>
-        <p>Feed me a word, any word<br>whatever you're currrently feeling.<br>
-            Into my mouth, the words travel south<br>and out pops a beautiful meaning!</p>
-        <div class="submitWord">
-            <input type="text" name="word" id="word" value="">
-            <button type="submit" id="search"><img src="icons8-mouth-100.png"></button>
-        </div>
-        <div id="displayMeaning"></div>
-        <div id="displaySynonym"></div>
+      <h1>Word Munch</h1>
+      <p>
+        Feed me a word, any word<br />whatever you're currrently feeling.<br />
+        Into my mouth, the words travel south<br />and out pops a beautiful meaning!
+      </p>
+      <div class="submitWord">
+        <input type="text" name="word" id="word" value="" />
+        <button type="submit" id="search"><img src="icons8-mouth-100.png" /></button>
+      </div>
+      <div id="displayMeaning"></div>
+      <div id="displaySynonym"></div>
     </div>
-</body>
-
+  </body>
 </html>
